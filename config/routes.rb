@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   	sessions: 'users/sessions'
 	} 
 
+	get '/rolypoly' => "home#game"
 end
