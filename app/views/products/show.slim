@@ -1,0 +1,12 @@
+h2 #{@product.name}
+
+-if has_reviews?
+	- @product.reviews.each do |review|
+		div #{review.rating}
+		div #{review.comment}
+- else
+	p This product currently has no reviews.
+
+- if user_signed_in? && !left_review?
+	form action=new_product_review_path(@product.brand, @product)
+	 input type="submit" value="Add Review"

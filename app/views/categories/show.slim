@@ -1,6 +1,6 @@
 - @category.products.each do |product|
 	h3
 		- if !product.reviews.empty?
-			a href=brand_product_path(product.brand.id, product.id) #{product.brand.name} #{product.name} #{avg_rating(product.reviews)}
+			a href=product_path(product) #{product.brand.name} #{product.name} #{avg_rating(product.reviews)}
 		- else
-			a href=brand_product_path(product.brand.id, product.id) #{product.brand.name} #{product.name}
+			a href=product_path(product) #{product.brand.name} #{product.name}
