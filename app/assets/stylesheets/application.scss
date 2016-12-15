@@ -21,6 +21,7 @@ $yellow: #EDE7B1;
 
 body {
 	/*background: $pink;*/
+	font-family: sans-serif;
 }
 
 a {
@@ -31,3 +32,11 @@ a {
 /*.container {
 	background: white;
 }*/
+
+label {
+	display: block;
+}
+
+input[type="submit"] {
+	display: block;
+}
