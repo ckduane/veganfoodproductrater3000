@@ -11,8 +11,10 @@
 	<nav>
 	<input type="text" placeholder="search for a product">
 	<i class="fa fa-search" aria-hidden="true"></i>
-	<%= link_to "New Product", new_product_path %>
+	
 	<% if user_signed_in? %>
+		<%= link_to "Add Product", new_product_path %>
+		<%= link_to current_user.username, current_user %>
 		<%= link_to "Log Out", destroy_user_session_path,:method => :delete %>
 	<% else %>
 		<%= link_to "Register", new_user_registration_path %>

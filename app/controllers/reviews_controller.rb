@@ -18,6 +18,11 @@ class ReviewsController < ApplicationController
 		end
 	end
 
+	def edit
+		@product = find_product
+		@review = find_review
+	end
+
 	private
 
 	def review_params
@@ -26,5 +31,9 @@ class ReviewsController < ApplicationController
 
 	def find_product
 		Product.find_by(id: params[:product_id])
+	end
+
+	def find_review
+		Review.find_by(id: params[:id])
 	end
 end

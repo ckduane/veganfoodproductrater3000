@@ -1,0 +1,8 @@
+h2 #{@user.username}
+
+- @user.reviews.each do |review|
+	.review-details
+		= review.rating
+		= review.comment
+		form action=edit_product_review_path(@review)
+	 		input type="submit" value="Edit"

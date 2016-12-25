@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   	resources :reviews
   end
 
+  resources :users
+
   devise_for :users, controllers: {
   	sessions: 'users/sessions'
 	} 
