@@ -2,6 +2,8 @@ h2 welcome
 
 p click a category below to view a list of top rated processed food items
 
-- @categories.each do |category|
-	h3 
-		a href=category_path(category.id) #{category.name}
+.category-list
+	- @categories.each do |category|
+		.category-detail
+			h3 
+				a href=category_path(category.id) #{category.name}

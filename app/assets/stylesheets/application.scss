@@ -13,25 +13,53 @@
  *= require_tree .
  *= require_self
  */
-$blue: #81F4E1;
-$pink: #F694C1;
-$green: #CBEAA6;
-$yellow: #EDE7B1;
+$blue: #3BCEAC;
+$pink: #fb8fab;
+$green: #0EAD69;
+$yellow: #FFD23F;
+$purple: #540D6E;
+$black: #444;
+$blonde: #F4F1BB;
 
 
 body {
-	/*background: $pink;*/
-	font-family: sans-serif;
+	background: $yellow;
+	font-family: 'Open Sans', sans-serif;
 }
+
+h1, h2 {
+	font-family: 'Pacifico', cursive;
+}
+
+h3 {}
 
 a {
 	text-decoration: none;
-	/*color: $blue;*/
+	color: $black;
 }
 
-/*.container {
+.container {
+	
+}
+
+.category-list {
+	background: #E8E8E8;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.category-detail {
+  text-align: center;
 	background: white;
-}*/
+	border-radius: 5px;
+	box-shadow: 0px 3px 5px #ccc;
+	height: 100px;
+	padding: 10px;
+	margin: 10px;
+	width: 100px;
+}
 
 label {
 	display: block;
