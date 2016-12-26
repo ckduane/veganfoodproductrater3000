@@ -6,7 +6,11 @@ class ProductsController < ApplicationController
 	end
 
 	def show
-		@product = Product.find_by(id: params[:id])
+		if Product.find_by(id: params[:product_id])
+			@product = Product.find_by(id: params[:product_id])
+		else
+			@product = Product.find_by(id: params[:id])
+		end
 	end
 
 	def create
