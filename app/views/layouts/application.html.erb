@@ -9,19 +9,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= fa_icon "bars" %>
 	<nav>
-	<input type="text" placeholder="search for a product">
-	<i class="fa fa-search" aria-hidden="true"></i>
-	
-	<% if user_signed_in? %>
-		<%= link_to "Add Product", new_product_path %>
-		<%= link_to current_user.username, current_user %>
-		<%= link_to "Log Out", destroy_user_session_path,:method => :delete %>
-	<% else %>
-		<%= link_to "Register", new_user_registration_path %>
-		<%= link_to "Log In", new_user_session_path %>
-	<% end %>
+		<%= fa_icon "bars", class: "menu-bars" %>
+		<% if user_signed_in? %>
+			<%= link_to new_product_path do %>
+				<%= fa_icon "plus" %> Add Product
+			<% end %>
+			<%= link_to current_user do %>
+				<%= fa_icon "user-circle" %> <%= current_user.username %>
+			<% end %>
+			<%= link_to destroy_user_session_path,:method => :delete do %>
+			 <%= fa_icon "sign-out" %> Log Out
+			<% end %>
+		<% else %>
+			<%= link_to new_user_registration_path do %>
+				<%= fa_icon "user-plus" %> Register
+			<% end %>
+			<%= link_to new_user_session_path do %>
+				<%= fa_icon "sign-in" %> Log In
+			<% end %>
+		<% end %>
 	</nav>
+	<input type="text" placeholder="search for a product">
+		<i class="fa fa-search" aria-hidden="true"></i>
 	<h1><%= link_to "Vegan Food Product Rater 3000", root_path %></h1>
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

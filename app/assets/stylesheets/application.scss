@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
+ *= require font-awesome
  */
 $blue: #3BCEAC;
 $pink: #fb8fab;
@@ -25,6 +27,35 @@ $blonde: #F4F1BB;
 body {
 	background: $yellow;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.fa-bars {
+	font-size: 25px !important;
+}
+
+.menu-bars {
+	align-self: flex-end;
+	color: white;
+	padding: 8px 15px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+	background: $black;
+	height: 100%;
+	width: 200px;
+	z-index: 1;
+	position: fixed;
+  top: 0;
+  left: 0;
+	a {
+		color: white;
+		padding: 10px;
+	}
+	a:hover {
+		background: #555;
+	}
 }
 
 h1, h2 {
