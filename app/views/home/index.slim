@@ -1,9 +1,19 @@
-h2 welcome
-
-p click a category below to view a list of top rated processed food items
-
 .category-list
-	- @categories.each do |category|
-		.category-detail
-			h3 
-				a href=category_path(category.id) #{category.name}
+	.category-detail.dairy
+		h3 
+			a href=category_path(@categories[0].id) #{@categories[0].name}
+	.category-detail.meats
+		h3 
+			a href=category_path(@categories[1].id) #{@categories[1].name}
+	.category-detail.condiments
+		h3 
+			a href=category_path(@categories[2].id) #{@categories[2].name}
+	.category-detail.premade
+		h3 
+			a href=category_path(@categories[3].id) #{@categories[3].name}
+	.category-detail.snacks
+		h3 
+			a href=category_path(@categories[4].id) #{@categories[4].name}
+	.category-detail.candy
+		h3 
+			a href=category_path(@categories[5].id) #{@categories[5].name}

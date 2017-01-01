@@ -3,13 +3,13 @@
 <head>
   <title>Vegan Food Product Rater 3000</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+  
   <script src="https://use.fontawesome.com/f3f0aa6a92.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= fa_icon "bars" %>
 	<nav>
 		<%= fa_icon "bars", class: "menu-bars" %>
 		<% if user_signed_in? %>
@@ -31,9 +31,12 @@
 			<% end %>
 		<% end %>
 	</nav>
-	<input type="text" placeholder="search for a product">
-		<i class="fa fa-search" aria-hidden="true"></i>
-	<h1><%= link_to "Vegan Food Product Rater 3000", root_path %></h1>
+	<header>
+		<%= fa_icon "bars" %>
+		<h1><%= link_to "Vegan Food Product Rater 3000", root_path %></h1>
+		<input type="text" placeholder="search for a product">
+			<i class="fa fa-search" aria-hidden="true"></i>
+	</header>
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
