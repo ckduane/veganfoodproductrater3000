@@ -1,13 +1,15 @@
-h2 
-	span #{@product.brand.name} #{@product.name}
+h2: span #{@product.brand.name} #{@product.name}
 
 -if has_reviews?
 	- @product.reviews.each do |review|
-		div #{review.rating}
-		div #{review.user.username}
-		div #{review.comment}
-		-if user_signed_in? && owns_review?(review)
-			= link_to "Edit", edit_product_review(review)
+		.review-single
+			.rating #{review.rating}
+			.comment 
+				.review-comment #{review.comment}
+				.review-user 
+					= link_to review.user.username, user_path(review.user)
+			-if user_signed_in? && owns_review?(review)
+				= link_to "Edit", edit_product_review(review)
 
 - else
 	p This product currently has no reviews.

@@ -1,10 +1,8 @@
-h2 
-	span #{@category.name}
+h2: span #{@category.name}
 .product-list
 	- @category.products.each do |product|
 		.product-single
 			.title
-					h3
-						a href=product_path(product) #{product.brand.name} #{product.name}
+					h3: a href=product_path(product) #{product.brand.name} #{product.name}
 			- if !product.reviews.empty?
 				.rating #{avg_rating(product.reviews)}
