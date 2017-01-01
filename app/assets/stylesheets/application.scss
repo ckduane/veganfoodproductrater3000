@@ -112,7 +112,7 @@ a {
   cursor: pointer;
 }
 
-.category-detail:hover {
+.category-detail:hover, .search-bar:hover, .search-bar:focus {
 	box-shadow: none;
 	transform: translateY(5px);
 }
@@ -147,6 +147,7 @@ a {
   border-radius: 5px;
   border: none;
   position: relative;
+  box-shadow: 4px 4px 0px #b88d00;
 }
 
 .fa-search {
@@ -182,17 +183,26 @@ input[type="submit"] {
 .rating {
 	font-family: 'Pacifico', cursive;
 	font-size: 25px;
-	color: #E56B70;
+	color: $candy;
 	order: 2;
 }
 
 .comment {
 	display: flex;
 	flex-direction: column;
-	width: 80%;
+	width: 70%;
 }
 
 .review-user a {
 	color: $dairy;
+	font-weight: bold;
+}
+
+.review-name {
+	width: 30%;
+}
+
+.review-name a {
+	color: $candy;
 	font-weight: bold;
 }

@@ -1,5 +1,4 @@
-h2 
-	span #{@category.name}
+h2: span #{@category.name}
 .product-list
 	- @category.products.each do |product|
 		.product-single

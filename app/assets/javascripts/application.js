@@ -16,8 +16,23 @@
 //= require_tree
 
 $(document).ready(function(){
+	// slide out navigation
 	$('nav').hide();
 	$('.fa-bars').on('click', function(){
 		$('nav').toggle('slide')
 		})
+
+	// focus search, move icon
+	$('.search-bar').focus(function(){
+		$('.fa-search').css('transform', 'translateY(5px)')
+	})
+
+	// hover search, move icon
+	$('.search-bar').hover(function(){
+		$('.fa-search').css('transform', 'translateY(5px)')
+	}, function(){
+		$('.fa-search').css('transform', 'translateY(0px)')
+	})
+
+	
 })
