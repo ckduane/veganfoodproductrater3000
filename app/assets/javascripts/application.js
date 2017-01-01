@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require jquery-ui
+//= require_tree
+
+$(document).ready(function(){
+	$('nav').hide();
+	$('.fa-bars').on('click', function(){
+		$('nav').toggle('slide')
+		})
+})

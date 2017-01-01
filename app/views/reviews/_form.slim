@@ -1,0 +1,12 @@
+= form_for @review, method: "post", url: product_reviews_path do |f|
+	= f.label :rating
+	= f.radio_button :rating, 1
+	= f.radio_button :rating, 2
+	= f.radio_button :rating, 3
+	= f.radio_button :rating, 4
+	= f.radio_button :rating, 5
+
+	=f.label :comment
+	=f.text_area :comment, size: "30x10"
+
+	=f.submit

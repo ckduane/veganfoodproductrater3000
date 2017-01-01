@@ -1,6 +1,10 @@
-- @category.products.each do |product|
-	h3
-		- if !product.reviews.empty?
-			a href=brand_product_path(product.brand.id, product.id) #{product.brand.name} #{product.name} #{avg_rating(product.reviews)}
-		- else
-			a href=brand_product_path(product.brand.id, product.id) #{product.brand.name} #{product.name}
+h2 
+	span #{@category.name}
+.product-list
+	- @category.products.each do |product|
+		.product-single
+			.title
+					h3
+						a href=product_path(product) #{product.brand.name} #{product.name}
+			- if !product.reviews.empty?
+				.rating #{avg_rating(product.reviews)}

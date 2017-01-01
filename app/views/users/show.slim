@@ -1,0 +1,12 @@
+h2 #{@user.username}
+
+span #{@user.reviews.count} reviews
+
+- @user.reviews.each do |review|
+	.review-details
+		.review-name
+			span #{review.product.brand.name} #{review.product.name}
+		.review-rating-details
+			span #{review.rating}
+			span #{review.comment}
+		

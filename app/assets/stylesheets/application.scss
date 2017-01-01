@@ -1,0 +1,186 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery-ui
+ *= require font-awesome
+ */
+
+$yellow: #FFD23F;
+$dairy: #66c9ff;
+$meats: #ff6198;
+$premade: #67da5d;
+$snacks: #ff8f3f;
+$candy: #ff3f3f;
+$black: #444;
+
+
+body {
+	background: $yellow;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.fa-bars {
+	font-size: 25px !important;
+}
+
+.menu-bars {
+	align-self: flex-end;
+	color: white;
+	padding: 8px 15px;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+	background: $black;
+	height: 100%;
+	width: 200px;
+	z-index: 1;
+	position: fixed;
+  top: 0;
+  left: 0;
+	a {
+		color: white;
+		padding: 10px;
+	}
+	a:hover {
+		background: #555;
+	}
+}
+
+h1 {
+	text-align: center;
+	margin: 10px;
+}
+
+h1, h2 {
+	font-family: 'Pacifico', cursive;
+}
+
+h2 { 
+	width: 100%; 
+	text-align: center; 
+	border-bottom: 2px solid white; 
+	line-height: 0.1em; 
+	margin: 30px 0 30px;
+}
+
+h2 span {
+	background: $yellow;
+	padding: 0 10px;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+.category-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.category-detail {
+  text-align: center;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 7px 8px 0px #b88d00;
+  width: 35%;
+  padding-bottom: 22%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.category-detail:hover {
+	box-shadow: none;
+	transform: translateY(5px);
+}
+
+.dairy {
+	background: $dairy;
+}
+
+.meats {
+	background: $meats;
+}
+
+.condiments {
+	background: white;
+}
+
+.premade {
+	background: $premade;
+}
+
+.snacks {
+	background: $snacks;
+}
+
+.candy {
+	background: $candy;
+}
+
+.search-bar {
+  padding: 8px;
+  padding-right: 25px;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+}
+
+.fa-search {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+}
+
+label {
+	display: block;
+}
+
+input[type="submit"] {
+	display: block;
+}
+
+.product-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.product-single {
+	background: white;
+	border-bottom: 2px solid $dairy;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+}
+
+.rating {
+	font-family: 'Pacifico', cursive;
+	font-size: 25px;
+	color: #E56B70;
+}

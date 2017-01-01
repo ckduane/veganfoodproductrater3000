@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   root to: "home#index"
 
-  resources :categories
+  get '/categories/:category_id' => 'categories#show', as: :category
 
-  resources :brands do
-  	resources :products
+  resources :products do
+  	resources :reviews
   end
 
   devise_for :users, controllers: {
   	sessions: 'users/sessions'
 	} 
+
+	get '/users/:id' => 'users#show', as: :user
 
 end

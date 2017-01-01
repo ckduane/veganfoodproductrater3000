@@ -35,12 +35,14 @@ Product.create!(
 				)
 
 user = User.new
+user.username = 'chuck'
 user.email = 'christine@test.com'
 user.password = '123456'
 user.password_confirmation = '123456'
 user.save!
 
 user1 = User.new
+user1.username = 'test'
 user1.email = 'test@test.com'
 user1.password = '123456'
 user1.password_confirmation = '123456'
