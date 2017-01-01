@@ -168,9 +168,9 @@ input[type="submit"] {
 	flex-direction: column;
 }
 
-.product-single {
+.product-single, .review-single {
 	background: white;
-	border-bottom: 2px solid $dairy;
+	border-bottom: 2px solid $premade;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -183,4 +183,16 @@ input[type="submit"] {
 	font-family: 'Pacifico', cursive;
 	font-size: 25px;
 	color: #E56B70;
+	order: 2;
+}
+
+.comment {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.review-user a {
+	color: $dairy;
+	font-weight: bold;
 }
