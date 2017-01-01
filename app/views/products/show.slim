@@ -1,4 +1,5 @@
-h2 #{@product.brand.name} #{@product.name}
+h2 
+	span #{@product.brand.name} #{@product.name}
 
 -if has_reviews?
 	- @product.reviews.each do |review|
