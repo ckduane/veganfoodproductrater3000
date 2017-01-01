@@ -28,10 +28,13 @@ $black: #444;
 body {
 	background: $yellow;
 	font-family: 'Open Sans', sans-serif;
+	color: #222;
+	line-height: 1.5;
 }
 
 .fa-bars {
 	font-size: 25px !important;
+	cursor: pointer;
 }
 
 .menu-bars {
@@ -112,7 +115,7 @@ a {
   cursor: pointer;
 }
 
-.category-detail:hover, .search-bar:hover, .search-bar:focus {
+.category-detail:hover, .search-bar:hover, .search-bar:focus, input[type="submit"]:hover, .field input:hover {
 	box-shadow: none;
 	transform: translateY(5px);
 }
@@ -162,6 +165,33 @@ label {
 
 input[type="submit"] {
 	display: block;
+	border: none;
+	background: $candy;
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+	font-size: 1em;
+	box-shadow: 4px 4px 0px #b88d00;
+	cursor: pointer;
+	margin: 10px 0;
+}
+
+.field input {
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 25px;
+	padding: 10px;
+	width: 400px;
+	box-shadow: 4px 4px 0px #b88d00;
+}
+
+input[type="checkbox"] {
+	box-shadow: none;
+	width: 50px;
+}
+
+label[for='user_remember_me'] {
+	display: inline;
 }
 
 .product-list {
