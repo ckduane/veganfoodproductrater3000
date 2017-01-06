@@ -163,8 +163,14 @@ label {
 	display: block;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
 input[type="submit"] {
-	display: block;
 	border: none;
 	background: $candy;
 	padding: 10px;
@@ -173,7 +179,8 @@ input[type="submit"] {
 	font-size: 1em;
 	box-shadow: 4px 4px 0px #b88d00;
 	cursor: pointer;
-	margin: 10px 0;
+	margin: 20px auto;
+	width: 50%;
 }
 
 .field input {
@@ -192,6 +199,12 @@ input[type="checkbox"] {
 
 label[for='user_remember_me'] {
 	display: inline;
+}
+
+textarea {
+  border-radius: 10px;
+  padding: 15px;
+  border: none;
 }
 
 .product-list {
