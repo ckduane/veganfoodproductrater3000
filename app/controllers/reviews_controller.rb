@@ -21,6 +21,7 @@ class ReviewsController < ApplicationController
 	def edit
 		@product = find_product
 		@review = find_review
+		@categories = Category.all
 	end
 
 	private
