@@ -23,8 +23,8 @@ class ProductsController < ApplicationController
 			@product.reviews.create(
 												user_id: current_user.id, 
 												product_id: @product.id, 
-												rating: params[:product][:rating], 
-												comment: params[:product][:comment]
+												rating: params[:product]["reviews_attributes"]["0"]["rating"], 
+												comment: params[:product]["reviews_attributes"]["0"]["comment"]
 												)
 			redirect_to product_path(@product)
 		else
