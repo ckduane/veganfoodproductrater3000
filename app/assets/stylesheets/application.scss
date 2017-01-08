@@ -43,6 +43,11 @@ body {
 	padding: 8px 15px;
 }
 
+
+i.fa.fa-bars.menu-bars {
+  margin-right: 0px;
+}
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -57,7 +62,7 @@ nav {
 	background: $black;
 	height: 100%;
 	width: 200px;
-	z-index: 1;
+	z-index: 2;
 	position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +73,19 @@ nav {
 	a:hover {
 		background: #555;
 	}
+	.fa {
+	margin-right: 10px;
+	}
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 h1 {
@@ -163,8 +181,14 @@ label {
 	display: block;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
 input[type="submit"] {
-	display: block;
 	border: none;
 	background: $candy;
 	padding: 10px;
@@ -173,7 +197,8 @@ input[type="submit"] {
 	font-size: 1em;
 	box-shadow: 4px 4px 0px #b88d00;
 	cursor: pointer;
-	margin: 10px 0;
+	margin: 20px auto;
+	width: 50%;
 }
 
 .field input {
@@ -192,6 +217,12 @@ input[type="checkbox"] {
 
 label[for='user_remember_me'] {
 	display: inline;
+}
+
+textarea {
+  border-radius: 10px;
+  padding: 15px;
+  border: none;
 }
 
 .product-list {
