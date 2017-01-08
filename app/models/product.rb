@@ -4,4 +4,5 @@ class Product < ActiveRecord::Base
 	has_many :reviews
 
 	validates_associated :brand
+	accepts_nested_attributes_for :reviews
 end

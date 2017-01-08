@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
 	def new
 		@review = Review.new
-		@product = find_product
+		@product = Product.new
 	end
 
 	def create
