@@ -20,6 +20,7 @@ $(document).ready(function(){
 	$('nav').hide();
 	$('.fa-bars').on('click', function(){
 		$('nav').toggle('slide')
+		$('#overlay').toggleClass('overlay')
 		})
 
 	// focus search, move icon

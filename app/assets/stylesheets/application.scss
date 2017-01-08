@@ -43,6 +43,11 @@ body {
 	padding: 8px 15px;
 }
 
+
+i.fa.fa-bars.menu-bars {
+  margin-right: 0px;
+}
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -57,7 +62,7 @@ nav {
 	background: $black;
 	height: 100%;
 	width: 200px;
-	z-index: 1;
+	z-index: 2;
 	position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +73,19 @@ nav {
 	a:hover {
 		background: #555;
 	}
+	.fa {
+	margin-right: 10px;
+	}
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 h1 {
