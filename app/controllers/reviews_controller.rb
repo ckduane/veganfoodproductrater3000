@@ -1,9 +1,10 @@
 class ReviewsController < ApplicationController
 	before_action :authenticate_user!
+	before_action :find_review, only: [:edit, :update, :destroy ]
+	before_action :find_product, except: :create
 
 	def new
 		@review = Review.new
-		@product = find_product
 	end
 
 	def create
@@ -19,13 +20,9 @@ class ReviewsController < ApplicationController
 	end
 
 	def edit
-		@product = find_product
-		@review = find_review
 	end
 
 	def update
-		@review = find_review
-		@product = find_product
 		respond_to do |format|
 			if @review.update(review_params)
 				format.html { redirect_to @product, notice: 'Review was successfully updated.' }
@@ -37,6 +34,14 @@ class ReviewsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@review.destroy
+    respond_to do |format|
+      format.html { redirect_to @product, notice: 'Review was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+
 	private
 
 	def review_params
@@ -44,10 +49,10 @@ class ReviewsController < ApplicationController
 	end
 
 	def find_product
-		Product.find_by(id: params[:product_id])
+		@product = Product.find_by(id: params[:product_id])
 	end
 
 	def find_review
-		Review.find_by(id: params[:id])
+		@review = Review.find_by(id: params[:id])
 	end
 end
