@@ -10,11 +10,12 @@
 
 	=f.fields_for :reviews do |r|
 		= r.label :rating
-		= r.radio_button :rating, 1
-		= r.radio_button :rating, 2
-		= r.radio_button :rating, 3
-		= r.radio_button :rating, 4
-		= r.radio_button :rating, 5
+		.radio-buttons
+			= r.radio_button :rating, 1
+			= r.radio_button :rating, 2
+			= r.radio_button :rating, 3
+			= r.radio_button :rating, 4
+			= r.radio_button :rating, 5
 
 		=r.label :comment
 		=r.text_area :comment, size: "30x10", required: true
