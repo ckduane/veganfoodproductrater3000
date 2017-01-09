@@ -1,4 +1,5 @@
-= form_for @review, method: "post", url: product_reviews_path do |f|
+= form_for [@product, @review] do |f|
+
 	= f.label :rating
 	= f.radio_button :rating, 1
 	= f.radio_button :rating, 2
