@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
 	def new
 		@review = Review.new
-		@product = Product.new
+		@product = find_product
 	end
 
 	def create
@@ -21,7 +21,20 @@ class ReviewsController < ApplicationController
 	def edit
 		@product = find_product
 		@review = find_review
-		@categories = Category.all
+	end
+
+	def update
+		@review = find_review
+		@product = find_product
+		respond_to do |format|
+			if @review.update(review_params)
+				format.html { redirect_to @product, notice: 'Review was successfully updated.' }
+				format.json { render :show, status: :ok, location: @review }
+			else
+				format.html { render :edit }
+				format.json { render json: @review.errors, status: :unprocessable_entity }
+			end
+		end
 	end
 
 	private

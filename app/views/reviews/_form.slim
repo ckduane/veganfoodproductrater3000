@@ -1,13 +1,4 @@
-= form_for @review, method: "post", url: product_reviews_path do |f|
-
-	=f.label :category
-	=select :product, :category_id, @categories.collect{|c| [c.name, c.id]}
-
-	=f.label :brand
-	=f.text_field :brand
-
-	=f.label :name
-	=f.text_field :name
+= form_for @review, url: product_review_path do |f|
 
 	= f.label :rating
 	= f.radio_button :rating, 1
