@@ -30,6 +30,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	color: #222;
 	line-height: 1.5;
+	margin: 0;
 }
 
 .fa-bars {
@@ -54,6 +55,7 @@ header {
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: flex-start;
+	margin: 10px;
 }
 
 nav {
@@ -174,7 +176,7 @@ a {
 .fa-search {
   position: absolute;
   right: 15px;
-  top: 14px;
+  top: 15px;
 }
 
 label {
