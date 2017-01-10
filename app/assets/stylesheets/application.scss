@@ -146,6 +146,8 @@ a {
 
 .meats {
 	background: $meats;
+	background-image: url(/assets/meats.svg), none;
+	background-position: center;
 }
 
 .condiments {
