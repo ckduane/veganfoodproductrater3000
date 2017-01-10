@@ -35,5 +35,9 @@ $(document).ready(function(){
 		$('.fa-search').css('transform', 'translateY(0px)')
 	})
 
-	
+	var wiggleHotdog = new TimelineMax();
+
+	$('.hotdog').each(function(index, element){
+		TweenLite.to(element, 1, {y: '5px', ease:Bounce.easeOut});
+	})
 })
