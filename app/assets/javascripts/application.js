@@ -34,6 +34,8 @@ $(document).ready(function(){
 	}, function(){
 		$('.fa-search').css('transform', 'translateY(0px)')
 	})
-
+	$('.meats').hover(function(){
+		TweenMax.staggerFrom(".hotdog", 1, {y: '7px', delay:0.1, ease:Elastic.easeOut}, 0.1);
+	})
 	
 })
