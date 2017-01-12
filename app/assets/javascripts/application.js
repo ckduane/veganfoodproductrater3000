@@ -34,10 +34,8 @@ $(document).ready(function(){
 	}, function(){
 		$('.fa-search').css('transform', 'translateY(0px)')
 	})
-
-	var wiggleHotdog = new TimelineMax();
-
-	$('.hotdog').each(function(index, element){
-		TweenLite.to(element, 1, {y: '5px', ease:Bounce.easeOut});
+	$('.meats').hover(function(){
+		TweenMax.staggerFrom(".hotdog", 1, {y: '7px', delay:0.1, ease:Elastic.easeOut}, 0.1);
 	})
+	
 })
