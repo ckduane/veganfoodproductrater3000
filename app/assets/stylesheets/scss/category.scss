@@ -1,0 +1,67 @@
+@import "variables";
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-detail {
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 7px 8px 0px #b88d00;
+  width: 35%;
+  padding-top: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.category-detail:hover,
+.search-bar:hover,
+.search-bar:focus,
+input[type="submit"]:hover,
+.field input:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.dairy {
+  background: $dairy;
+}
+
+.meats {
+  background: $meats;
+}
+
+.condiments {
+  background: white;
+}
+
+.premade {
+  background: $premade;
+}
+
+.snacks {
+  background: $snacks;
+}
+
+.candy {
+  background: $candy;
+}
+
+.search-bar {
+  padding: 8px;
+  padding-right: 25px;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  box-shadow: 4px 4px 0px #b88d00;
+}
+
+.fa-search {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}

@@ -1,0 +1,16 @@
+@import "variables";
+
+.fa-bars {
+  font-size: 25px !important;
+  cursor: pointer;
+}
+
+.menu-bars {
+  align-self: flex-end;
+  color: white;
+  padding: 8px 15px;
+}
+
+i.fa.fa-bars.menu-bars {
+  margin-right: 0px;
+}
