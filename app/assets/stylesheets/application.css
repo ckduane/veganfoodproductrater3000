@@ -1,0 +1,213 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery-ui
+ *= require font-awesome
+ */
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #FFD23F;
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+  line-height: 1.5;
+  margin: 0; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem; }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background: #444;
+  height: 100%;
+  width: 20rem;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  nav a {
+    color: white;
+    padding: 1rem; }
+  nav a:hover {
+    background: #555; }
+  nav .fa {
+    margin-right: 1rem; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; }
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.category-detail {
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 7px 8px 0px #b88d00;
+  width: 35%;
+  padding-top: 1rem;
+  margin: 1rem;
+  cursor: pointer; }
+  .category-detail:hover {
+    box-shadow: none;
+    transform: translateY(0.5rem); }
+
+.product-list {
+  display: flex;
+  flex-direction: column; }
+
+.product-single, .review-single {
+  background: white;
+  border-bottom: 2px solid #67da5d;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px; }
+
+.rating {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #ff3f3f;
+  order: 2; }
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 70%; }
+
+.review-user a {
+  color: #66c9ff;
+  font-weight: bold; }
+
+.review-name {
+  width: 30%; }
+  .review-name a {
+    color: #ff3f3f;
+    font-weight: bold; }
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10%; }
+  form label, form input, form textarea, form select, form .radio-buttons {
+    width: 80rem;
+    margin: 0 auto; }
+  form label {
+    display: block; }
+  form input[type="submit"] {
+    border: none;
+    background: #ff3f3f;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1em;
+    box-shadow: 0.4rem 0.4rem 0 #b88d00;
+    cursor: pointer;
+    margin: 20px auto; }
+    form input[type="submit"]:hover {
+      box-shadow: none;
+      transform: translateY(0.5rem); }
+  form label[for='user_remember_me'] {
+    display: inline; }
+  form textarea {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: none; }
+  form .radio-buttons {
+    display: inline-block; }
+    form .radio-buttons input {
+      width: 3rem; }
+
+input[type="checkbox"] {
+  box-shadow: none;
+  width: 5rem; }
+
+h1 {
+  text-align: center;
+  margin: 10px; }
+
+h1, h2 {
+  font-family: 'Pacifico', cursive; }
+
+h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid white;
+  line-height: 0.1em;
+  margin: 30px 0 30px; }
+
+h2 span {
+  background: #FFD23F;
+  padding: 0 10px; }
+
+a {
+  text-decoration: none;
+  color: #444; }
+
+.fa-bars {
+  font-size: 25px !important;
+  cursor: pointer; }
+
+.menu-bars {
+  align-self: flex-end;
+  color: white;
+  padding: 8px 15px; }
+
+i.fa.fa-bars.menu-bars {
+  margin-right: 0px; }
+
+.field input {
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  width: 40rem;
+  box-shadow: 0.4rem 0.4rem 0 #b88d00; }
+  .field input:hover {
+    box-shadow: none;
+    transform: translateY(0.5rem); }
+
+.search-bar {
+  padding: 0.8rem;
+  padding-right: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  position: relative;
+  box-shadow: 0.4rem 0.4rem 0 #b88d00; }
+
+.fa-search {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.8rem; }
+
+/*# sourceMappingURL=application.css.map */

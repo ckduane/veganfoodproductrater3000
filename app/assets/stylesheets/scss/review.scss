@@ -1,0 +1,76 @@
+@import "variables";
+
+.rating {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: $candy;
+  order: 2;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.review-user a {
+  color: $dairy;
+  font-weight: bold;
+}
+
+.review-name {
+  width: 30%;
+  a {
+    color: $candy;
+    font-weight: bold;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10%;
+  label, input, textarea, select,.radio-buttons {
+    width: 80rem;
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+  }
+  input[type="submit"] {
+    border: none;
+    background: $candy;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1em;
+    box-shadow: 0.4rem 0.4rem 0 #b88d00;
+    cursor: pointer;
+    margin: 20px auto;
+    &:hover {
+      box-shadow: none;
+      transform: translateY(0.5rem);
+    }
+  }
+  label[for='user_remember_me'] {
+    display: inline;
+  }
+  textarea {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: none;
+  }
+  .radio-buttons {
+    display: inline-block;
+    input {
+      width: 3rem;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  box-shadow: none;
+  width: 5rem;
+}
+

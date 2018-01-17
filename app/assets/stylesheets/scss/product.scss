@@ -1,0 +1,17 @@
+@import "variables";
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-single, .review-single {
+  background: white;
+  border-bottom: 2px solid $premade;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}

@@ -1,0 +1,23 @@
+@import "variables";
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-detail {
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 7px 8px 0px #b88d00;
+  width: 35%;
+  padding-top: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  &:hover {
+    box-shadow: none;
+    transform: translateY(0.5rem);
+  }
+}
