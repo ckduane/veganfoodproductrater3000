@@ -15,6 +15,9 @@
  *= require jquery-ui
  *= require font-awesome
  */
+html {
+  font-size: 62.5%; }
+
 body {
   background: #FFD23F;
   font-family: 'Open Sans', sans-serif;
@@ -28,25 +31,25 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 10px; }
+  margin: 1rem; }
 
 nav {
   display: flex;
   flex-direction: column;
   background: #444;
   height: 100%;
-  width: 200px;
+  width: 20rem;
   z-index: 2;
   position: fixed;
   top: 0;
   left: 0; }
   nav a {
     color: white;
-    padding: 10px; }
+    padding: 1rem; }
   nav a:hover {
     background: #555; }
   nav .fa {
-    margin-right: 10px; }
+    margin-right: 1rem; }
 
 .overlay {
   position: absolute;
@@ -69,48 +72,12 @@ nav {
   border-radius: 5px;
   box-shadow: 7px 8px 0px #b88d00;
   width: 35%;
-  padding-top: 10px;
-  margin: 10px;
+  padding-top: 1rem;
+  margin: 1rem;
   cursor: pointer; }
-
-.category-detail:hover,
-.search-bar:hover,
-.search-bar:focus,
-input[type="submit"]:hover,
-.field input:hover {
-  box-shadow: none;
-  transform: translateY(5px); }
-
-.dairy {
-  background: #66c9ff; }
-
-.meats {
-  background: #ff6198; }
-
-.condiments {
-  background: white; }
-
-.premade {
-  background: #67da5d; }
-
-.snacks {
-  background: #ff8f3f; }
-
-.candy {
-  background: #ff3f3f; }
-
-.search-bar {
-  padding: 8px;
-  padding-right: 25px;
-  border-radius: 5px;
-  border: none;
-  position: relative;
-  box-shadow: 4px 4px 0px #b88d00; }
-
-.fa-search {
-  position: absolute;
-  right: 15px;
-  top: 15px; }
+  .category-detail:hover {
+    box-shadow: none;
+    transform: translateY(0.5rem); }
 
 .product-list {
   display: flex;
@@ -128,7 +95,7 @@ input[type="submit"]:hover,
 
 .rating {
   font-family: 'Pacifico', cursive;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #ff3f3f;
   order: 2; }
 
@@ -147,46 +114,43 @@ input[type="submit"]:hover,
     color: #ff3f3f;
     font-weight: bold; }
 
-label {
-  display: block; }
-
 form {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 0 10%; }
-
-input[type="submit"] {
-  border: none;
-  background: #ff3f3f;
-  padding: 10px;
-  color: white;
-  border-radius: 10px;
-  font-size: 1em;
-  box-shadow: 4px 4px 0px #b88d00;
-  cursor: pointer;
-  margin: 20px auto;
-  width: 50%; }
-
-.field input {
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 25px;
-  padding: 10px;
-  width: 400px;
-  box-shadow: 4px 4px 0px #b88d00; }
+  form label, form input, form textarea, form select, form .radio-buttons {
+    width: 80rem;
+    margin: 0 auto; }
+  form label {
+    display: block; }
+  form input[type="submit"] {
+    border: none;
+    background: #ff3f3f;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1em;
+    box-shadow: 0.4rem 0.4rem 0 #b88d00;
+    cursor: pointer;
+    margin: 20px auto; }
+    form input[type="submit"]:hover {
+      box-shadow: none;
+      transform: translateY(0.5rem); }
+  form label[for='user_remember_me'] {
+    display: inline; }
+  form textarea {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: none; }
+  form .radio-buttons {
+    display: inline-block; }
+    form .radio-buttons input {
+      width: 3rem; }
 
 input[type="checkbox"] {
   box-shadow: none;
-  width: 50px; }
-
-label[for='user_remember_me'] {
-  display: inline; }
-
-textarea {
-  border-radius: 10px;
-  padding: 15px;
-  border: none; }
+  width: 5rem; }
 
 h1 {
   text-align: center;
@@ -221,5 +185,29 @@ a {
 
 i.fa.fa-bars.menu-bars {
   margin-right: 0px; }
+
+.field input {
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  width: 40rem;
+  box-shadow: 0.4rem 0.4rem 0 #b88d00; }
+  .field input:hover {
+    box-shadow: none;
+    transform: translateY(0.5rem); }
+
+.search-bar {
+  padding: 0.8rem;
+  padding-right: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  position: relative;
+  box-shadow: 0.4rem 0.4rem 0 #b88d00; }
+
+.fa-search {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.8rem; }
 
 /*# sourceMappingURL=application.css.map */

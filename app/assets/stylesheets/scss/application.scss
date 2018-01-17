@@ -17,9 +17,36 @@
  */
 
 @import "base";
-
 @import "category";
 @import "product";
 @import "review";
 @import "typography";
 @import "user";
+
+.field input {
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  width: 40rem;
+  box-shadow: 0.4rem 0.4rem 0 #b88d00;
+  &:hover {
+    box-shadow: none;
+    transform: translateY(0.5rem);
+  }
+}
+
+.search-bar {
+  padding: 0.8rem;
+  padding-right: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  position: relative;
+  box-shadow: 0.4rem 0.4rem 0 #b88d00;
+}
+
+.fa-search {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.8rem;
+}
